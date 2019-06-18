@@ -4,15 +4,14 @@ import { HttpClient } from '@angular/common/http';
 import homeData from '../assets/homes.json';
 import { Home } from './home';
 import { Observable, of } from 'rxjs';
-import { filter, map, find } from 'rxjs/operators';
+import { filter, map, find, concatMap } from 'rxjs/operators';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class HomeService {
 
-	constructor() { 
-	}
+	constructor() {}
 
 	public getHomes(): Observable<Home[]> {
 		return of(homeData).pipe(
@@ -21,6 +20,16 @@ export class HomeService {
 			}
 		)
 	}
-
+	public getHomeDetail(name: string): Observable<Home[]> {
+		return of(homeData).pipe(
+			map((items: Home[]): Home[] => {
+				return items.filter(
+					(item: Home) => {
+						return item['home_name'] === name
+					}
+				)
+			})
+		)
+	}
 	
 }

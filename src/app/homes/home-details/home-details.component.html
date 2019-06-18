@@ -1,3 +1,22 @@
-<p>
-  home-details works!
-</p>
+<section class="details" *ngFor="let home of homeArr">
+	<div class="details__description">
+		<h2>{{ home.home_name }}</h2>
+		<h4>{{ home.email }}</h4>
+		<img src="../../../assets/images/no-preview-available.png" alt="image data">
+		<div class="details__description-address">
+			<address>
+				<p>{{ home.home_address }}</p>
+				<p>home number: {{ home.home_number }}</p>
+				<p>{{ home.city }} <span>{{ home.state }}</span></p>
+				<p>{{ home.phone }}</p>
+			</address>
+		</div>
+	</div>
+	<div class="details__info">
+		<p>1,687 Sq. Feet</p>
+		<p>3  Bedrooms</p>
+		<p>2  Bathrooms</p>
+		<p>2  Garages</p>
+		<p>2 +  Stories</p>
+	</div>
+</section>

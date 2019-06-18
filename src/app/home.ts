@@ -7,6 +7,5 @@ export class Home {
 		public home_number: string,
 		public city: string,
 		public state: string,
-		public phone: string) {
-		}
+		public phone: string) {	}
 }

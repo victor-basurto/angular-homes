@@ -1,11 +1,14 @@
 <div class="card">
-	<div class="bg-image"></div>
-	<div class="content">
-		<h2>{{ home.home_name }}</h2>
-		<h3>{{ home.home_address }}</h3>
-		<h4>{{ home.city }}</h4>
-		<h5>{{ home.state }}</h5>
-		<h5>{{ home.number }}</h5>
-		<p>{{ home.email }}</p>
-	</div>
+	<a [routerLink]="[index, 'details']" routerLinkActive="active">
+		<div class="bg-image"></div>
+		<div class="content">
+			<h2>{{ home.home_name }}</h2>
+			<h3>{{ home.home_address }}</h3>
+			<h4>{{ home.city }}</h4>
+			<h5>{{ home.state }}</h5>
+			<h5>{{ home.number }}</h5>
+			<p>{{ home.email }}</p>
+		</div>
+	</a>
 </div>
+
