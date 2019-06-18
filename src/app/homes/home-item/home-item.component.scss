@@ -1,0 +1,22 @@
+.card {
+	box-shadow: 0px 0px 5px -3px #383531;
+	transition: box-shadow .2s ease-in-out;
+
+	.bg-image {
+		background: url(../../../assets/images/no-preview-available.png) no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 240px;
+		width: 100%;
+	}
+
+	.content {
+		padding: 1rem;
+		
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 10px -3px #383531;
+		
+	}
+}

@@ -1,0 +1,7 @@
+<div class="grid-section">
+	<app-home-item 
+		*ngFor="let home of (homeList$ | async); let i = index"
+		[home]="home"
+		[index]="i">
+	</app-home-item>
+</div>
