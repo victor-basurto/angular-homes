@@ -15,5 +15,7 @@ export class HomeItemComponent implements OnInit {
 
 	ngOnInit() {
 	}
-
+	onScroll() {
+		console.log('scrolled');
+	}
 }
