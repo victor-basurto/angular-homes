@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import homeData from '../assets/homes.json';
 import { Home } from './home';
 import { Observable, of } from 'rxjs';
-import { filter, map, find, concatMap } from 'rxjs/operators';
+import { filter, map, find, concatMap, mapTo, take } from 'rxjs/operators';
 
 @Injectable({
 	providedIn: 'root'
@@ -31,5 +31,7 @@ export class HomeService {
 			})
 		)
 	}
+
+	
 	
 }
