@@ -14,3 +14,8 @@
 		[index]="home.home_name">
 	</app-home-item>
 </div>
+
+<virtual-scroller #scroll [items]="items">
+	<my-custom-component *ngFor="let item of scroll.viewPortItems">
+	</my-custom-component>
+</virtual-scroller>

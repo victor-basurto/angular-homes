@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 
 import { AppComponent } from './app.component';
 import { HomesComponent } from './homes/homes/homes.component';
@@ -22,7 +23,8 @@ import { HomeItemComponent } from './homes/home-item/home-item.component';
     AppRoutingModule,
 	BrowserAnimationsModule,
 	ScrollingModule,
-	InfiniteScrollModule
+	InfiniteScrollModule,
+	VirtualScrollerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
